@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+}
+
+/* added to fit background image to whole page */
+body, html {
+    height: 100%;
+}
+
+/* set the background image and font style default */
+body {
+    background-image: url(../images/muirWoods.png); /* https://www.pexels.com/photo/nature-france-rocks-caves-2633/ */
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    text-align: center;
+    background-repeat: no-repeat;
+    font-size: 1em;
+    color: #fff;
+    margin: 0 auto;
+}
+
+.content {
+    background: rgba(50, 50, 50, 0.9);
+    max-width: 90%;
+    margin: 0 auto;
+    margin-top: 1em;
+    padding: 1em;
+}
