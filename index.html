@@ -8,31 +8,43 @@
 
         <link href="assets/css/reset.css" rel="stylesheet" type="text/css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch|Fredericka+the+Great|Neuton" rel="stylesheet">
         <link href="assets/css/style.css" rel="stylesheet" type="text/css">
 
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous" defer></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous" defer></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous" defer></script>
         <script src="assets/javascript/jquery.js" defer></script>
-        <script src="assets/javascript/game.js" defer></script>
+        <script src="assets/javascript/app.js" defer></script>
 
         <title>Trivia</title>
     </head>
 
     <body>
-
         
+        <!-- Box that contains the start, questions, and end slide-->
         <div class="content">
-            <h1>Trivia</h1>
-            <h2>Muir Woods National Park </h2>
-            <button>Start!</button>
-        </div>
-
-        <div class="content">
-            <h3>Time Remaining: </h3>
-            
-        </div>
+            <h1 class="start">Trivia:</h1>
+            <h2 class="start">Muir Woods National Monument</h2>
+            <button type="button" class="btn btn-light start">Start!</button>
+            <!-- Question slide -->
+            <div id="timeRemaining"></div>
+            <div class="questionTracker"></div>
+            <div class="question"></div>
+            <div class="answerList"></div>
+            <!-- Answer slide-->
+            <div class="message"></div>
+            <div class="correctedAnswer"></div>
+            <div class="gif"></div>
+            <!-- Results -->
+            <div class="finalMessage"></div>
+            <div class="correctAnswers"></div>
+            <div class="incorrectAnswers"></div>
+            <div class="unanswered"></div>
+            <div class="startOver"></div>
+            </div>
     
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
     </body>
 
 </html>
