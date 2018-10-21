@@ -45,18 +45,18 @@ h2 {
 
 #timeRemaining {
     font-size: 2em; 
-    padding-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 .questionTracker {
     font-size: 1.5em;
     color: rgb(115, 173, 33);
-    padding-bottom: 1em;
+    margin-bottom: 1em;
 }
 
 .question {
     font-size: 3.5em;
-    padding-bottom: .5em;
+    margin-bottom: .5em;
 }
 
 .thisChoice {
@@ -71,5 +71,33 @@ h2 {
 
 .message {
     font-size: 3em;
-    padding-bottom: .5em;
+    margin-bottom: .5em;
+}
+
+.correctedAnswer {
+    font-size: 1.2em;
+    margin-bottom: .6em;
+}
+
+.finalMessage {
+    font-size: 3em;
+    color: rgb(115, 173, 33);
+    margin-bottom: 1em;
+}
+
+.correctAnswers, .incorrectAnswers, .unanswered {
+    font-size: 1.5em;
+    line-height: 2em;
+}
+
+.unanswered {
+    margin-bottom: 3.5em;
+}
+
+.startOver {
+    font-size: 2em;
+}
+
+.startOver:hover {
+    color: rgb(115, 173, 33);
 }

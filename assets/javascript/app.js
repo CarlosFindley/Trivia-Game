@@ -1,3 +1,5 @@
+$(".startOver").hide();
+
 // Beginning jQuery library
 $(document).ready(function() {
 
@@ -40,7 +42,7 @@ $(document).ready(function() {
         $(".start").hide();
         newGame();
     });
-
+    
     $(".startOver").on("click", function() {
         $(this).hide();
         newGame();
@@ -119,6 +121,7 @@ $(document).ready(function() {
         if ((userSelect == rightAnswerIndex) && (answered == true)){
             correctAnswer++;
             $(".message").html(messages.correct);
+            $(".correctedAnswer").html("The correct answer was: " + rightAnswerText);
         } else if ((userSelect != rightAnswerIndex) && (answered == true)){
             incorrectAnswer++;
             $(".message").html(messages.incorrect);
@@ -138,6 +141,7 @@ $(document).ready(function() {
         }
         
         function scoreboard(){
+            $(".content").css({"padding": "2.5em 0"});
             $("#timeRemaining").empty();
             $(".message").empty();
             $(".correctedAnswer").empty();
@@ -149,7 +153,7 @@ $(document).ready(function() {
             $(".unanswered").html("Unanswered: " + unanswered);
             $(".startOver").addClass("reset");
             $(".startOver").show();
-            $(".startOver").html("Start Over?");
+            $(".startOver").html("Play Again");
         }
     }
 
