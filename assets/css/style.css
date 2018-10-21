@@ -43,14 +43,33 @@ h2 {
     color: rgb(115, 173, 33);
 }
 
-.questionNumberStyle {
+#timeRemaining {
+    font-size: 2em; 
+    padding-bottom: 1em;
+}
+
+.questionTracker {
     font-size: 1.5em;
+    color: rgb(115, 173, 33);
+    padding-bottom: 1em;
 }
 
-.questionStyle {
+.question {
     font-size: 3.5em;
+    padding-bottom: .5em;
 }
 
-.timeRemainingStyle {
-    font-size: 1em;
+.thisChoice {
+    font-size: 1.2em;
+    line-height: 2em;
+}
+
+
+.thisChoice:hover {
+    background: rgb(115, 173, 33);
+}
+
+.message {
+    font-size: 3em;
+    padding-bottom: .5em;
 }

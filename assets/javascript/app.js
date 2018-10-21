@@ -16,6 +16,8 @@ $(document).ready(function() {
         answer: 2
     }];
 
+
+    
     var questionNumber; 
     var correctAnswer; 
     var incorrectAnswer; 
@@ -24,14 +26,13 @@ $(document).ready(function() {
     var time; 
     var answered; 
     var userSelect;
-    var choices = $('<div>');
     var messages = {
-        correct: "Yes, that's right!",
-        incorrect: "No, that's not it.",
-        endTime: "Out of time!",
-        finished: "Alright! Let's see how well you did."
+        correct: "Correct!",
+        incorrect: "Wrong choice...",
+        endTime: "Time's up!",
+        finished: "Trivia Results"
     }
-    var gifArray = ["question1", "question2", "question3"];
+    var pngArray = ["question1", "question2", "question3"];
 
 
     // this hides the start button slides and begins the game
@@ -55,6 +56,7 @@ $(document).ready(function() {
         correctAnswer = 0;
         incorrectAnswer = 0;
         unanswered = 0;
+        $(".content").css({"padding": "5em 0"});
         newQuestion();
     }
 
@@ -62,32 +64,34 @@ $(document).ready(function() {
     function newQuestion() {
         $(".message").empty();
         $(".correctedAnswer").empty();
-        $(".gif").empty();
+        $(".png").empty();
         answered = true;
         
         //sets up new questions & answerList
-        $(".questionTracker").html("<span class='questionNumberStyle'>" + "Question " + (questionNumber+1) + " of " +triviaQuestions.length + "</span>");
-        $(".question").html("<span class='questionStyle'>" + triviaQuestions[questionNumber].question + "</span>");
-        for (var i = 0; i < 4; i++){
-            // var choices = $('<div>');
-            choices.text(triviaQuestions[questionNumber].answerList[i]);
-            choices.attr({"data-index": i });
-            choices.addClass("thisChoice");
-            $(".answerList").append(choices);
-        }
-        countdown();
-        //clicking an answer will pause the time and setup answerPage
-        $(".thisChoice").on("click", function() {
-            userSelect = $(this).data("index");
-            clearInterval(time);
-            answerPage();
-        });
+        $(".questionTracker").html("<span>" + "Question " + (questionNumber+1) + " of " +triviaQuestions.length + "</span>");
+        $(".question").html("<span>" + triviaQuestions[questionNumber].question + "</span>");
+            
+            for (var i = 0; i < 4; i++){
+                var choices = $("<div>");
+                choices.text(triviaQuestions[questionNumber].answerList[i]);
+                choices.attr({"data-index": i });
+                choices.addClass("thisChoice");
+                $(".answerList").append(choices);
+            }
+
+            countdown();
+            //clicking an answer will pause the time and setup slideResponse
+            $(".thisChoice").on("click", function() {
+                userSelect = $(this).data("index");
+                clearInterval(time);
+                slideResponse();
+            });
     }
 
 
     function countdown() {
         seconds = 15;
-        $("#timeRemaining").html("<span class='timeRemainingStyle'>Time Remaining: " + seconds + "</span>");
+        $("#timeRemaining").html("<span>Time Remaining: " + seconds + "</span>");
         answered = true;
         //sets timer to go down
         time = setInterval(showCountdown, 1000);
@@ -95,7 +99,7 @@ $(document).ready(function() {
 
     function showCountdown() {
         seconds--;
-        $("#timeRemaining").html("<span class='timeRemainingStyle'>Time Remaining: " + seconds + "</span>");
+        $("#timeRemaining").html("<span>Time Remaining: " + seconds + "</span>");
         if (seconds < 1){
             clearInterval(time);
             answered = false;
@@ -110,7 +114,7 @@ $(document).ready(function() {
     
         var rightAnswerText = triviaQuestions[questionNumber].answerList[triviaQuestions[questionNumber].answer];
         var rightAnswerIndex = triviaQuestions[questionNumber].answer;
-        $(".gif").html("<img src = 'assets/images/" + gifArray[questionNumber] + ".gif' width = '400px'>");
+        $(".png").html("<img src = 'assets/images/" + pngArray[questionNumber] + ".png' width = '500px'>");
         //checks to see correct, incorrect, or unanswered
         if ((userSelect == rightAnswerIndex) && (answered == true)){
             correctAnswer++;
@@ -137,7 +141,7 @@ $(document).ready(function() {
             $("#timeRemaining").empty();
             $(".message").empty();
             $(".correctedAnswer").empty();
-            $(".gif").empty();
+            $(".png").empty();
         
             $(".finalMessage").html(messages.finished);
             $(".correctAnswers").html("Correct Answers: " + correctAnswer);
