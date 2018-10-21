@@ -36,8 +36,9 @@ $(document).ready(function() {
     }
     var pngArray = ["question1", "question2", "question3"];
 
-    var gameSound = new Audio("./assets/audio/cathedral.mp3"); // resource https://soundcloud.com/user7860487/cathedral-grove-dawn-may
-    var loseSound = new Audio("./assets/audio/bearGrunt.mp3"); // resource https://www.zapsplat.com/sound-effect-category/bears/
+    var gameSound = new Audio("./assets/audio/cathedral.mp3"); // resource www.soundcloud.com/user7860487/cathedral-grove-dawn-may
+    var winSound = new Audio("./assets/audio/owl.mp3"); // source www.soundwhich.com/free-sound-effects
+    var loseSound = new Audio("./assets/audio/bearGrunt.mp3"); // resource www.zapsplat.com/sound-effect-category/bears/
 
 
     // this hides the start button slides and begins the game
@@ -125,6 +126,7 @@ $(document).ready(function() {
         //checks to see correct, incorrect, or unanswered
         if ((userSelect == rightAnswerIndex) && (answered == true)){
             correctAnswer++;
+            winSound.play();
             $(".message").html(messages.correct);
             $(".correctedAnswer").html("The correct answer was: " + rightAnswerText);
         } else if ((userSelect != rightAnswerIndex) && (answered == true)){
