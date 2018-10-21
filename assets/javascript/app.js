@@ -36,10 +36,15 @@ $(document).ready(function() {
     }
     var pngArray = ["question1", "question2", "question3"];
 
+    var gameSound = new Audio("./assets/audio/cathedral.mp3"); // resource https://soundcloud.com/user7860487/cathedral-grove-dawn-may
+    var loseSound = new Audio("./assets/audio/bearGrunt.mp3"); // resource https://www.zapsplat.com/sound-effect-category/bears/
+
 
     // this hides the start button slides and begins the game
     $(".btn-light").on("click", function() {
         $(".start").hide();
+        gameSound.play();
+        gameSound.loop= true;
         newGame();
     });
     
@@ -124,6 +129,7 @@ $(document).ready(function() {
             $(".correctedAnswer").html("The correct answer was: " + rightAnswerText);
         } else if ((userSelect != rightAnswerIndex) && (answered == true)){
             incorrectAnswer++;
+            loseSound.play();
             $(".message").html(messages.incorrect);
             $(".correctedAnswer").html("The correct answer was: " + rightAnswerText);
         } else {
