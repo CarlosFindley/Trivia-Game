@@ -103,3 +103,176 @@ h2 {
 .startOver:hover {
     color: rgb(115, 173, 33);
 }
+
+/* mobile responsive */
+@media screen and (max-width: 1030px){
+	.content{
+		height: 76em;
+        margin-top: 4em;
+        margin-bottom: 4em;
+        margin-right: 5em;
+        margin-left: 5em;
+        padding: 20em 0;
+    }
+    #timeRemaining {
+        font-size: 3em; 
+    }
+    .questionTracker {
+        font-size: 2em;
+        margin-bottom: 3em;
+    }
+    h2, .question {
+        margin-bottom: 1em;
+    }
+    .message {
+        margin-bottom: 1.3em;
+    }
+    .thisChoice, .correctedAnswer {
+        font-size: 2.5em;
+        line-height: 2em;
+        margin-right: 1em;
+        margin-left: 1em;
+    }
+    .correctedAnswer {
+        margin-bottom: 1em;
+    }
+    .finalMessage {
+        font-size: 5em;
+    }
+    .correctAnswers, .incorrectAnswers, .unanswered {
+        font-size: 3em;
+        line-height: 2em;
+    }
+    .startOver {
+        font-size: 3.5em;
+    }
+}
+
+@media screen and (max-width: 770px){
+	.content{
+		height: 57em;
+        margin-top: 3em;
+        margin-bottom: 3em;
+        margin-right: 3em;
+        margin-left: 3em;
+        padding: 14em 0;
+    }
+    h2 {
+        font-size: 3.5em;
+        margin-bottom: 1em;
+    }
+    #timeRemaining {
+        font-size: 2.1em; 
+    }
+    .questionTracker {
+        font-size: 1.5em;
+        margin-bottom: 2em;
+    }
+    .question {
+        font-size: 2.5em;
+        margin-bottom: 1em;
+    }
+    .thisChoice, .correctedAnswer {
+        font-size: 1.8em;
+    }
+    .finalMessage {
+        font-size: 4em;
+    }
+    .correctAnswers, .incorrectAnswers, .unanswered {
+        font-size: 2.5em;
+        line-height: 2em;
+    }
+    .startOver {
+        font-size: 3em;
+    }
+}
+
+@media screen and (max-width: 420px){
+    .content{
+		height: 44em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-right: 1em;
+        margin-left: 1em;
+        padding: 9em 0;
+    }
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 1em;
+    }
+    h2 {
+        font-size: 3em;
+        margin-bottom: 1em;
+    }
+    #timeRemaining, .message {
+        font-size: 1.5em;
+    }
+    .questionTracker {
+        font-size: 1em;
+        margin-bottom: 2em;
+    }
+    .question {
+        font-size: 1.8em;
+        margin-bottom: 1em;
+    }
+    .thisChoice, .correctedAnswer {
+        font-size: 1em;
+        margin-right: 2em;
+        margin-left: 2em;
+    }
+    .finalMessage {
+        font-size: 2em;
+    }
+    .correctAnswers, .incorrectAnswers, .unanswered, .startOver {
+        font-size: 1.5em;
+        line-height: 2em;
+    }
+    .finalMessage {
+        font-size: 2.5em;
+    }
+    .startOver {
+        font-size: 1.1em;
+    }
+}
+
+@media screen and (max-width: 380px){
+    .content{
+		height: 48.5em;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        margin-right: 1em;
+        margin-left: 1em;
+        padding: 10em 0;
+    }
+    h1 {
+        font-size: 2.5em;
+        margin-bottom: 1em;
+    }
+    h2 {
+        font-size: 3em;
+        margin-bottom: 1em;
+    }
+    #timeRemaining, .message {
+        font-size: 1.5em;
+    }
+    .questionTracker {
+        font-size: 1em;
+        margin-bottom: 2em;
+    }
+    .question {
+        font-size: 1.8em;
+        margin-bottom: 1em;
+    }
+    .thisChoice, .correctedAnswer {
+        font-size: 1em;
+    }
+    .finalMessage {
+        font-size: 2em;
+    }
+    .correctAnswers, .incorrectAnswers, .unanswered, .startOver {
+        font-size: 1.5em;
+        line-height: 2em;
+    }
+}
+
+/* How to overwrite JS on image sizing?
