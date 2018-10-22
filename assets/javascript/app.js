@@ -5,9 +5,13 @@ $(document).ready(function() {
 
     // questions
     var triviaQuestions = [{
-        question: "Which individual(s) first purchased the land?",
+        question: "Which individual(s) first purchased the land that is now called Muir Woods?",
         answerList: ["A. John Muir", "B. The Peralta Family", "C. Elizabeth Thacher & William Kent", "D. Phoebe & George Hearst"],
         answer: 2
+    },{
+        question: "Muir Woods was named after:",
+        answerList: ["A. John Muir", "B. Jamie Muir", "C. Norrie Muir", "D. Lewis F. Muir"],
+        answer: 0
     },{
         question: "There is a wooden statue at the Muir Woods National Monument depicting:",
         answerList: ["A. John Muir", "B. Elizabeth Thacher & William Kent", "C. St. Francis", "D. Big Foot"],
@@ -15,6 +19,30 @@ $(document).ready(function() {
     },{
         question: "Muir Woods is a:",
         answerList: ["A. National Park", "B. State Park", "C. National Monument", "D. None of the above"],
+        answer: 2
+    },{
+        question: "President Theodore Roosevelt established Muir Woods National Monument in:",
+        answerList: ["A. 1930", "B. 1898", "C. 2000", "D. 1908"],
+        answer: 3
+    },{
+        question: "The first name suggested for the national monument was:",
+        answerList: ["A. Roosevelt Woods National Monument", "B. Kent Woods National Monument", "C. Muir Woods National Monument", "D. Joaquin Miller Woods National Monument"],
+        answer: 1
+    },{
+        question: "Muir Woods is located in what state?",
+        answerList: ["A. Oregon", "B. California", "C. Washington", "D. New York"],
+        answer: 1
+    },{
+        question: "Which people first inhabited the area that now comprises Muir Woods?",
+        answerList: ["A. Miwoks", "B. The Spanish", "C. United States Settlers", "D. The Aztecs"],
+        answer: 0
+    },{
+        question: "What is Muir Woods known for?",
+        answerList: ["A. Coastal Pine trees", "B. Oak trees", "C. Whomping Willow", "D. Redwood trees"],
+        answer: 3
+    },{
+        question: "The tallest redwood tree in Muir Woods is about:",
+        answerList: ["A. 150ft", "B. 310ft", "C. 258ft", "D. 120ft"],
         answer: 2
     }];
 
@@ -34,7 +62,7 @@ $(document).ready(function() {
         endTime: "Time's up!",
         finished: "Trivia Results"
     }
-    var pngArray = ["question1", "question2", "question3"];
+    var pngArray = ["question1", "question2", "question3", "question4", "question5", "question6", "question7", "question8", "question9", "question10"];
 
     var gameSound = new Audio("./assets/audio/cathedral.mp3"); // resource www.soundcloud.com/user7860487/cathedral-grove-dawn-may
     var winSound = new Audio("./assets/audio/owl.mp3"); // source www.soundwhich.com/free-sound-effects
@@ -122,7 +150,7 @@ $(document).ready(function() {
     
         var rightAnswerText = triviaQuestions[questionNumber].answerList[triviaQuestions[questionNumber].answer];
         var rightAnswerIndex = triviaQuestions[questionNumber].answer;
-        $(".png").html("<img src = 'assets/images/" + pngArray[questionNumber] + ".png' width = '500px'>");
+        $(".png").html("<img src = 'assets/images/" + pngArray[questionNumber] + ".png' width = '460px'>");
         //checks to see correct, incorrect, or unanswered
         if ((userSelect == rightAnswerIndex) && (answered == true)){
             correctAnswer++;
