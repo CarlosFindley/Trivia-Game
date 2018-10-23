@@ -104,6 +104,8 @@ h2 {
     color: rgb(115, 173, 33);
 }
 
+
+
 /* mobile responsive */
 @media screen and (max-width: 1030px){
 	.content{
@@ -233,6 +235,9 @@ h2 {
     .startOver {
         font-size: 1.1em;
     }
+    .imgStyle {
+        width: 290px;
+    }
 }
 
 @media screen and (max-width: 380px){
@@ -272,6 +277,9 @@ h2 {
     .correctAnswers, .incorrectAnswers, .unanswered, .startOver {
         font-size: 1.5em;
         line-height: 2em;
+    }
+    .imgStyle {
+        width: 290px;
     }
 }
 

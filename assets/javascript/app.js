@@ -150,7 +150,7 @@ $(document).ready(function() {
     
         var rightAnswerText = triviaQuestions[questionNumber].answerList[triviaQuestions[questionNumber].answer];
         var rightAnswerIndex = triviaQuestions[questionNumber].answer;
-        $(".png").html("<img src = 'assets/images/" + pngArray[questionNumber] + ".png' width = '460px'>");
+        $(".png").html("<img class='imgStyle' src = 'assets/images/" + pngArray[questionNumber] + ".png' width = '460px'>");
         //checks to see correct, incorrect, or unanswered
         if ((userSelect == rightAnswerIndex) && (answered == true)){
             correctAnswer++;
